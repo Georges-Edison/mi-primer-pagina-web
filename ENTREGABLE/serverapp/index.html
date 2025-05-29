@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TELECOM NETWORK PERU: Servicios empresariales de redes, colaboración, networking, productos de tecnología avanzada para empresas.">
+    <meta name="keywords" content="Redes, Telecomunicaciones, Networking, Servicios empresariales, Colaboración, Tecnología, Telecom Network Peru">
+    <title>TELECOM NETWORK PERU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #hero {
+            background: #0073e6;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .producto {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0055aa;
+        }
+
+        #servicios, #carrito, #video {
+            padding: 2rem;
+            background-color: white;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TELECOM NETWORK PERU</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Conectamos tu empresa al futuro</h2>
+        <p>Soluciones de redes, colaboración y tecnología empresarial.</p>
+    </section>
+
+    <section id="productos">
+        <h2 style="text-align:center;">Productos de Networking</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x200?text=Router+Empresarial" alt="Router Empresarial">
+                <h3>Router Empresarial X100</h3>
+                <p>Alta velocidad y seguridad para tu red.</p>
+                <button onclick="agregarAlCarrito('Router Empresarial X100')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x200?text=Switch+Gigabit" alt="Switch Gigabit">
+                <h3>Switch Gigabit 24p</h3>
+                <p>Optimiza la conectividad en tu oficina.</p>
+                <button onclick="agregarAlCarrito('Switch Gigabit 24p')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x200?text=Kit+WiFi+Empresarial" alt="Kit Wi-Fi">
+                <h3>Kit Wi-Fi Empresarial</h3>
+                <p>Cobertura total para entornos exigentes.</p>
+                <button onclick="agregarAlCarrito('Kit Wi-Fi Empresarial')">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>Servicios Empresariales</h2>
+        <ul>
+            <li>Diseño e implementación de redes LAN/WAN</li>
+            <li>Servicios de colaboración en la nube</li>
+            <li>Soporte técnico remoto 24/7</li>
+            <li>Consultoría en infraestructura de red</li>
+        </ul>
+    </section>
+
+    <section id="video">
+        <h2>Conoce nuestros servicios</h2>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito">
+            <!-- Aquí se añaden los productos seleccionados -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TELECOM NETWORK PERU - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function agregarAlCarrito(producto) {
+            const lista = document.getElementById("lista-carrito");
+            const item = document.createElement("li");
+            item.textContent = producto;
+            lista.appendChild(item);
+        }
+    </script>
+</body>
+</html>
